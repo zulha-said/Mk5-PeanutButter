@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5" />
+  <title>MK5 PeanutButter · Natural & Organic</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@400;500;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome 6 (Free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Announcement -->
+  <div class="announcement">
+    <i class="fas fa-truck"></i> Free delivery 
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">MK5<span>PB</span></div>
+    <div class="nav-links" id="navLinks">
+      <a href="#">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#delivery">Delivery</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-icons">
+      <i class="fas fa-search" onclick="alert('🔍 Search (demo)')"></i>
+      <span class="cart-badge">
+        <i class="fas fa-shopping-cart" onclick="alert('Cart opened')"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </span>
+      <i class="fas fa-moon" id="themeToggle" style="font-size:1.3rem;"></i>
+      <div class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Natural Peanut Butter <br>Made With Love &amp; Quality</h1>
+        <p>Healthy, delicious and freshly crafted peanut butter delivered to your doorstep.</p>
+        <div class="hero-buttons">
+          <button class="btn" onclick="alert('🛒 Shop Now')">Shop Now</button>
+          <button class="btn btn-outline" onclick="document.getElementById('about').scrollIntoView()">Learn More</button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="images/image5.jfif" alt="Natural Peanut Butter Jar" loading="lazy" style="background:#dacfc0;">
+      </div>
+    </section>
+
+    <!-- Features -->
+    <div class="features">
+      <div class="feature-card"><i class="fas fa-leaf"></i><h4>100% Natural</h4></div>
+      <div class="feature-card"><i class="fas fa-ban"></i><h4>No Preservatives</h4></div>
+      <div class="feature-card"><i class="fas fa-shipping-fast"></i><h4>Fast Delivery</h4></div>
+      <div class="feature-card"><i class="fas fa-tag"></i><h4>Affordable Prices</h4></div>
+    </div>
+
+    <!-- Categories -->
+    <h2>Categories</h2>
+    <div class="category-grid">
+      <div class="category-card"><img src="images/category 1.jfif" alt="Classic"><h3>🥜 Creamy</h3></div>
+      <div class="category-card"><img src="images/category 2.jfif" alt="creamy"><h3>🌰 Crunchy</h3></div>
+      <div class="category-card"><img src="images/category 3.jfif" alt="protein"><h3>💪  Protein</h3></div>
+    </div>
+
+    <!-- Products -->
+    <h2 id="products">Featured Products</h2>
+    <div class="product-grid" id="productGrid">
+      <!-- 6 product cards -->
+      <div class="product-card"><img src="images/image1.jfif" alt="Classic"><div class="product-content"><span class="badge">Best Seller</span><h3>Classic Peanut Butter</h3><p>Smooth & creamy</p><div class="price">TZS 12,000</div><button class="btn-cart" onclick="addToCart()">Add To Cart</button></div></div>
+      <div class="product-card"><img src="images/image2.jfif" alt="Honey"><div class="product-content"><span class="badge">New</span><h3>Honey Roast</h3><p>Sweet & nutty</p><div class="price">TZS 14,500</div><button class="btn-cart" onclick="addToCart()">Add To Cart</button></div></div>
+      <div class="product-card"><img src="images/image3.jfif" alt="Crunchy"><div class="product-content"><span class="badge">Crunchy</span><h3>Crunchy Bits</h3><p>Extra texture</p><div class="price">TZS 13,000</div><button class="btn-cart" onclick="addToCart()">Add To Cart</button></div></div>
+      <div class="product-card"><img src="images/image4.jfif" alt="Protein"><div class="product-content"><span class="badge">Protein</span><h3>Protein Boost</h3><p>High protein</p><div class="price">TZS 16,000</div><button class="btn-cart" onclick="addToCart()">Add To Cart</button></div></div>
+      <div class="product-card"><img src="images/image5.jfif" alt="Dark"><div class="product-content"><span class="badge">Limited</span><h3>Dark Chocolate</h3><p>Indulgent</p><div class="price">TZS 15,000</div><button class="btn-cart" onclick="addToCart()">Add To Cart</button></div></div>
+      <div class="product-card"><img src="images/image7.jfif" alt="Organic"><div class="product-content"><span class="badge">Organic</span><h3>Organic Pure</h3><p>No additives</p><div class="price">TZS 13,500</div><button class="btn-cart" onclick="addToCart()">Add To Cart</button></div></div>
+    </div>
+
+    <!-- Story -->
+    <div class="story-section" id="about">
+      <div>
+        <h2>Our Story</h2>
+        <p>MK5 PeanutButter began with a simple mission: to provide healthy, delicious and affordable peanut butter for every family. We carefully select quality peanuts and create products that bring nutrition and great taste.</p>
+      </div>
+      <div class="story-image">
+        <img src="images/manager.jpeg" alt="Boss">
+      </div>
+    </div>
+
+    <!-- Delivery -->
+    <div class="delivery-section" id="delivery">
+      <h2>Delivery Across Tanzania</h2>
+      <p>We deliver to Dar es Salaam, Dodoma, Arusha, Mwanza, Mbeya, Morogoro and many more regions.</p>
+      <div class="delivery-tags"><span>Dar es Salaam</span><span>Dodoma</span><span>Arusha</span><span>Mwanza</span><span>Mbeya</span><span>Morogoro</span><span>+ more</span></div>
+    </div>
+
+    <!-- Reviews (auto-slide interactive) -->
+    <h2 id="reviews">Customer Reviews</h2>
+    <div class="review-wrapper">
+      <div class="review-slider" id="reviewSlider">
+        <div class="review-card"><div class="stars">★★★★★</div><h4>Sarah M.</h4><p>"The best peanut butter I have ever tasted. Creamy and full of flavor!"</p></div>
+        <div class="review-card"><div class="stars">★★★★★</div><h4>John K.</h4><p>"Fresh, natural, and delicious! My whole family loves it."</p></div>
+        <div class="review-card"><div class="stars">★★★★☆</div><h4>Emily R.</h4><p>"Great quality and super fast delivery. Will order again."</p></div>
+        <div class="review-card"><div class="stars">★★★★★</div><h4>David L.</h4><p>"Perfect for my protein shakes. Highly recommend to everyone."</p></div>
+        <div class="review-card"><div class="stars">★★★★★</div><h4>Grace P.</h4><p>"I love the crunchy version! So tasty and natural."</p></div>
+        <div class="review-card"><div class="stars">★★★★☆</div><h4>Michael O.</h4><p>"Good value for money. Real natural ingredients."</p></div>
+      </div>
+    </div>
+    <div class="review-controls">
+      <button id="prevReview" aria-label="Previous review"><i class="fas fa-chevron-left"></i></button>
+      <button id="nextReview" aria-label="Next review"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <div class="dots" id="dotsContainer"></div>
+
+    <!-- FAQ -->
+    <h2>FAQ</h2>
+    <div class="faq-item active" onclick="toggleFAQ(this)"><div class="faq-question"><span>Do you deliver nationwide?</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer">Yes, we deliver across Tanzania, including all major cities and regions.</div></div>
+    <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-question"><span>How long does delivery take?</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer">Typically 2-4 business days depending on your location.</div></div>
+    <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-question"><span>Are your products natural?</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer">100% natural, no preservatives or artificial additives.</div></div>
+    <div class="faq-item" onclick="toggleFAQ(this)"><div class="faq-question"><span>How can I place an order?</span><i class="fas fa-chevron-down"></i></div><div class="faq-answer">You can order directly through our website or WhatsApp.</div></div>
+
+    <!-- Newsletter -->
+    <div class="newsletter">
+      <h2>Get Updates &amp; Offers</h2>
+      <form onsubmit="alert('Subscribed!'); return false;"><input type="email" placeholder="Your email address" required><button class="btn" type="submit">Subscribe</button></form>
+    </div>
+
+    <!-- Contact -->
+    <h2 id="contact">Contact Us</h2>
+    <div class="contact-form">
+      <form onsubmit="alert('Message sent!'); return false;"><input type="text" placeholder="Your Name" required><input type="email" placeholder="Email"><textarea placeholder="Your message"></textarea><button class="btn" type="submit" style="width:100%;">Send Message</button></form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div><h3 style="font-family:Montserrat;">MK5 PeanutButter</h3><p>Healthy • Natural • Delicious</p><div class="social"><i class="fab fa-facebook"></i><i class="fab fa-instagram"></i><i class="fab fa-whatsapp" onclick="window.open('https://wa.me/2557XXXXXXXX')"></i></div></div>
+      <div><h4>Quick Links</h4><a href="#">Products</a><br><a href="#about">About</a><br><a href="#reviews">Reviews</a><br><a href="#contact">Contact</a></div>
+      <div><h4>Support</h4><a href="#">Delivery</a><br><a href="#">FAQ</a><br><a href="#">Order Tracking</a></div>
+      <div class="copy">© 2026 MK5 PeanutButter. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
+
+<script src="js/script.js"></script>
+</body>
+</html>
